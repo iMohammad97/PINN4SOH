@@ -6,7 +6,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 def load_data(args,small_sample=None):
-    root = 'data/XJTU data'
+    root = '/content/PINN4SOH/data/XJTU data'
     data = XJTUdata(root=root, args=args)
     train_list = []
     test_list = []
