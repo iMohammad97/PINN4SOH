@@ -67,7 +67,7 @@ def write_to_txt(txt_name,txt):
 
 
 class Results:
-    def __init__(self,root='../results/Ours/XJTU results/'):
+    def __init__(self,root='../results/Ours/'):
         self.root = root
         self.experiments = os.listdir(root)
 
