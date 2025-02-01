@@ -258,7 +258,7 @@ class Results:
 
 
 if __name__ == '__main__':
-    root = '../results of reviewer/XJTU results/'
+    root = ''
     writer = pd.ExcelWriter('../results of reviewer/XJTU_results.xlsx')
 
     results = Results(root)
