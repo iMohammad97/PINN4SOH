@@ -261,7 +261,7 @@ if __name__ == '__main__':
     root = '/kaggle/working/results/'
     writer = pd.ExcelWriter('XJTU_results.xlsx')
 
-    results = Results(root)
+    results = Results()
     for batch in range(6):
         df_battery_mean = results.get_battery_mean(train_batch=batch,test_batch=batch,total_experiment=10)
         df_battery_mean.to_excel(writer,sheet_name='battery_mean_{}'.format(batch),index=False)
