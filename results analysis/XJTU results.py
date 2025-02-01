@@ -258,7 +258,7 @@ class Results:
 
 
 if __name__ == '__main__':
-    root = ''
+    root = '/kaggle/working/results/Ours/XJTU results/'
     writer = pd.ExcelWriter('XJTU_results.xlsx')
 
     results = Results(root)
