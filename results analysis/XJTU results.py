@@ -259,7 +259,7 @@ class Results:
 
 if __name__ == '__main__':
     root = ''
-    writer = pd.ExcelWriter('../results of reviewer/XJTU_results.xlsx')
+    writer = pd.ExcelWriter('XJTU_results.xlsx')
 
     results = Results(root)
     for batch in range(6):
