@@ -12,7 +12,6 @@ import scienceplots
 plt.style.use('science')
 
 from sklearn import metrics
-import numpy as np
 import logging
 
 def get_logger(log_name='log.txt'):
@@ -65,9 +64,8 @@ def write_to_txt(txt_name,txt):
         f.write(txt)
         f.write('\n')
 
-
 class Results:
-    def __init__(self,root='../results/Ours/'):
+    def __init__(self,root='../results/Ours/XJTU results/'):
         self.root = root
         self.experiments = os.listdir(root)
 
@@ -258,10 +256,10 @@ class Results:
 
 
 if __name__ == '__main__':
-    root = '/kaggle/working/results/'
-    writer = pd.ExcelWriter('XJTU_results.xlsx')
+    root = '../results of reviewer/XJTU results/'
+    writer = pd.ExcelWriter('../results of reviewer/XJTU_results.xlsx')
 
-    results = Results()
+    results = Results(root)
     for batch in range(6):
         df_battery_mean = results.get_battery_mean(train_batch=batch,test_batch=batch,total_experiment=10)
         df_battery_mean.to_excel(writer,sheet_name='battery_mean_{}'.format(batch),index=False)
