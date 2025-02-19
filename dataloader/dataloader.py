@@ -81,16 +81,23 @@ class DF():
         y2 = y[1:]
         return (x1,y1),(x2,y2)
 
-    # MY CHANGES: New helper function for loading & concatenating battery data from a list of file paths
-    def _load_and_concat(self, path_list, nominal_capacity):
+    def load_all_battery(self,path_list,nominal_capacity):
         '''
-        Load data from multiple battery CSVs and concatenate them into single arrays.
-        This is used internally for battery-level splitting.
+        Read multiple csv files, divide the data into X and Y, and then package it into a dataloader
+        :param path_list: list of file paths
+        :param nominal_capacity: nominal capacity, used to calculate SOH
+        :param batch_size: batch size
+        :return: Dataloader
         '''
-        # MY CHANGES: We moved this logic from "load_all_battery" into a separate function.
         X1, X2, Y1, Y2 = [], [], [], []
+        if self.args.log_dir is not None and self.args.save_folder is not None:
+            save_name = os.path.join(self.args.save_folder,self.args.log_dir)
+            write_to_txt(save_name,'data path:')
+            write_to_txt(save_name,str(path_list))
         for path in path_list:
             (x1, y1), (x2, y2) = self.load_one_battery(path, nominal_capacity)
+            # print(path)
+            # print(x1.shape, x2.shape, y1.shape, y2.shape)
             X1.append(x1)
             X2.append(x2)
             Y1.append(y1)
@@ -101,113 +108,73 @@ class DF():
         Y1 = np.concatenate(Y1, axis=0)
         Y2 = np.concatenate(Y2, axis=0)
 
-        return X1, X2, Y1, Y2
 
-    def load_all_battery(self,path_list,nominal_capacity):
-        '''
-        Read multiple csv files, and package them into dataloaders.
-        By default, this function now ensures *battery-level* splitting:
-        1) 80% of batteries for training/validation, 20% of batteries for testing.
-        2) Then, from the training subset, 80% for training, 20% for validation.
+        tensor_X1 = torch.from_numpy(X1).float()
+        tensor_X2 = torch.from_numpy(X2).float()
+        tensor_Y1 = torch.from_numpy(Y1).float().view(-1,1)
+        tensor_Y2 = torch.from_numpy(Y2).float().view(-1,1)
+        # print('X shape:',tensor_X1.shape)
+        # print('Y shape:',tensor_Y1.shape)
 
-        # MY CHANGES: Instead of randomly splitting *rows* across all batteries,
-        # we now split *battery file paths* so that entire batteries are reserved
-        # either for training, validation, or testing.
-        '''
+        # 有时候需要指定训练集和测试集的电池ID，因此这个函数返回一个字典，里面包含多种情况，
+        # 可根据需要选择
+        # 1. 传入的path_list是【训练集】、【验证集】和【测试集】的电池ID，这时候按照前80%训练，后20%测试划分，再从训练集中随机划分出验证集，比例为8:2
+        # 2. 传入的path_list是【训练集】和【测试集】的电池ID，这种情况只需要按照8:2随机化划分训练集和测试集即可
+        # 3. 传入的path_list是【测试集】的电池ID，则不需要划分，直接封装成dataloader即可
+        ## English version
+        # Sometimes it is necessary to specify the battery ID of the training set and test set,
+        # so this function returns a dictionary containing a variety of situations,
+        # You can choose according to your needs
+        # 1. The incoming path_list is the battery ID of [training set], [validation set] and [test set].
+        #     At this time, it is divided into the first 80% for training and the last 20% for testing,
+        #     and then the validation set is randomly divided from the training set. The ratio is 8:2
+        # 2. The incoming path_list is the battery ID of [training set] and [testing set].
+        #     In this case, you only need to randomly divide the training set and test set according to 8:2.
+        # 3. The incoming path_list is the battery ID of the [test set], so there is no need to divide it and it can be directly encapsulated into a dataloader.
 
-        # ------------------------------------------------------------------
-        # OLD CODE (Commented out):
-        #
-        # X1, X2, Y1, Y2 = [], [], [], []
-        # for path in path_list:
-        #     (x1, y1), (x2, y2) = self.load_one_battery(path, nominal_capacity)
-        #     X1.append(x1)
-        #     X2.append(x2)
-        #     Y1.append(y1)
-        #     Y2.append(y2)
-        #
-        # X1 = np.concatenate(X1, axis=0)
-        # X2 = np.concatenate(X2, axis=0)
-        # Y1 = np.concatenate(Y1, axis=0)
-        # Y2 = np.concatenate(Y2, axis=0)
-        #
-        # # Then the code did row-level splits (80-20, etc.)
-        # ...
-        # ------------------------------------------------------------------
+        # Condition 1
+        # 1.1 划分训练集和测试集
+        split = int(tensor_X1.shape[0] * 0.8)
+        train_X1, test_X1 = tensor_X1[:split], tensor_X1[split:]
+        train_X2, test_X2 = tensor_X2[:split], tensor_X2[split:]
+        train_Y1, test_Y1 = tensor_Y1[:split], tensor_Y1[split:]
+        train_Y2, test_Y2 = tensor_Y2[:split], tensor_Y2[split:]
+        # 1.2 划分训练集和验证集
+        train_X1, valid_X1, train_X2, valid_X2, train_Y1, valid_Y1, train_Y2, valid_Y2 = \
+            train_test_split(train_X1, train_X2, train_Y1, train_Y2, test_size=0.2, random_state=420)
 
-        # MY CHANGES: Start of new battery-level approach
-        if self.args.log_dir is not None and self.args.save_folder is not None:
-            save_name = os.path.join(self.args.save_folder,self.args.log_dir)
-            write_to_txt(save_name,'data path:')
-            write_to_txt(save_name,str(path_list))
+        train_loader = DataLoader(TensorDataset(train_X1, train_X2, train_Y1, train_Y2),
+                                  batch_size=self.args.batch_size,
+                                  shuffle=True)
+        valid_loader = DataLoader(TensorDataset(valid_X1, valid_X2, valid_Y1, valid_Y2),
+                                  batch_size=self.args.batch_size,
+                                  shuffle=True)
+        test_loader = DataLoader(TensorDataset(test_X1, test_X2, test_Y1, test_Y2),
+                                 batch_size=self.args.batch_size,
+                                 shuffle=False)
 
-        # 1) Randomly split the entire path_list (each file is presumably one battery)
-        #    into train+valid and test sets (80%-20%).
-        train_valid_paths, test_paths = train_test_split(path_list, test_size=0.2, random_state=420)
+        # Condition 2
+        train_X1, valid_X1, train_X2, valid_X2, train_Y1, valid_Y1, train_Y2, valid_Y2 = \
+            train_test_split(tensor_X1, tensor_X2, tensor_Y1, tensor_Y2, test_size=0.2, random_state=420)
+        train_loader_2 = DataLoader(TensorDataset(train_X1, train_X2, train_Y1, train_Y2),
+                                  batch_size=self.args.batch_size,
+                                  shuffle=True)
+        valid_loader_2 = DataLoader(TensorDataset(valid_X1, valid_X2, valid_Y1, valid_Y2),
+                                  batch_size=self.args.batch_size,
+                                  shuffle=True)
 
-        # 2) From the train_valid_paths, split again for training and validation (80%-20%).
-        if len(train_valid_paths) > 1:
-            train_paths, valid_paths = train_test_split(train_valid_paths, test_size=0.2, random_state=420)
-        else:
-            # Edge case: if there's only 1 battery in train_valid, we treat it all as train
-            train_paths = train_valid_paths
-            valid_paths = []
+        # Condition 3
+        test_loader_3 = DataLoader(TensorDataset(tensor_X1, tensor_X2, tensor_Y1, tensor_Y2),
+                                 batch_size=self.args.batch_size,
+                                 shuffle=False)
 
-        # 3) Load and concatenate data from each subset.
-        X1_train, X2_train, Y1_train, Y2_train = self._load_and_concat(train_paths, nominal_capacity) \
-            if len(train_paths) > 0 else ([], [], [], [])
-        X1_valid, X2_valid, Y1_valid, Y2_valid = self._load_and_concat(valid_paths, nominal_capacity) \
-            if len(valid_paths) > 0 else ([], [], [], [])
-        X1_test,  X2_test,  Y1_test,  Y2_test  = self._load_and_concat(test_paths,  nominal_capacity) \
-            if len(test_paths) > 0  else ([], [], [], [])
 
-        # Convert lists to numpy arrays if they aren't empty
-        if len(X1_train) != 0: X1_train, X2_train, Y1_train, Y2_train = map(np.array, [X1_train, X2_train, Y1_train, Y2_train])
-        if len(X1_valid) != 0: X1_valid, X2_valid, Y1_valid, Y2_valid = map(np.array, [X1_valid, X2_valid, Y1_valid, Y2_valid])
-        if len(X1_test)  != 0: X1_test,  X2_test,  Y1_test,  Y2_test  = map(np.array, [X1_test, X2_test, Y1_test, Y2_test])
-
-        # 4) Convert to torch tensors (only if sets are non-empty)
-        if len(X1_train) != 0:
-            tensor_X1_train = torch.from_numpy(X1_train).float()
-            tensor_X2_train = torch.from_numpy(X2_train).float()
-            tensor_Y1_train = torch.from_numpy(Y1_train).float().view(-1,1)
-            tensor_Y2_train = torch.from_numpy(Y2_train).float().view(-1,1)
-            train_loader = DataLoader(TensorDataset(tensor_X1_train, tensor_X2_train, tensor_Y1_train, tensor_Y2_train),
-                                      batch_size=self.args.batch_size, shuffle=True)
-        else:
-            train_loader = None
-
-        if len(X1_valid) != 0:
-            tensor_X1_valid = torch.from_numpy(X1_valid).float()
-            tensor_X2_valid = torch.from_numpy(X2_valid).float()
-            tensor_Y1_valid = torch.from_numpy(Y1_valid).float().view(-1,1)
-            tensor_Y2_valid = torch.from_numpy(Y2_valid).float().view(-1,1)
-            valid_loader = DataLoader(TensorDataset(tensor_X1_valid, tensor_X2_valid, tensor_Y1_valid, tensor_Y2_valid),
-                                      batch_size=self.args.batch_size, shuffle=True)
-        else:
-            valid_loader = None
-
-        if len(X1_test) != 0:
-            tensor_X1_test = torch.from_numpy(X1_test).float()
-            tensor_X2_test = torch.from_numpy(X2_test).float()
-            tensor_Y1_test = torch.from_numpy(Y1_test).float().view(-1,1)
-            tensor_Y2_test = torch.from_numpy(Y2_test).float().view(-1,1)
-            test_loader = DataLoader(TensorDataset(tensor_X1_test, tensor_X2_test, tensor_Y1_test, tensor_Y2_test),
-                                     batch_size=self.args.batch_size, shuffle=False)
-        else:
-            test_loader = None
-
-        # 5) Build return dictionary
-        loader = {
-            'train': train_loader,
-            'valid': valid_loader,
-            'test': test_loader
-        }
-
-        # MY CHANGES: We skip the old Condition 1, 2, 3 row-based splits
-        # and only return the new battery-level splits (train, valid, test).
+        loader = {'train': train_loader, 'valid': valid_loader, 'test': test_loader,
+                  'train_2': train_loader_2,'valid_2': valid_loader_2,
+                  'test_3': test_loader_3}
         return loader
-        # MY CHANGES: End of new battery-level approach
+
+
 
 
 class XJTUdata(DF):
@@ -361,6 +328,7 @@ class TJUdata(DF):
         assert batch in [1,2,3], 'batch must be in {}'.format([1,2,3])
         root = os.path.join(self.root,self.batchs[batch-1])
         file_list = os.listdir(root)
+        df = pd.DataFrame()
         path_list = []
         for file in file_list:
             file_name = os.path.join(root,file)
@@ -390,32 +358,41 @@ if __name__ == '__main__':
         parser.add_argument('--batch_size',type=int,default=256,help='batch size')
         parser.add_argument('--normalization_method',type=str,default='z-score',help='min-max,z-score')
         parser.add_argument('--log_dir',type=str,default='test.txt',help='log dir')
-        parser.add_argument('--save_folder',type=str,default=None,help='folder to save logs')
         return parser.parse_args()
 
     args = get_args()
 
-    # Example usage with MIT data
+    # xjtu = XJTUdata(root='../data/XJTU data',args=args)
+    # path = '../data/XJTU data/2C_battery-1.csv'
+    # xjtu.read_one_batch('2C')
+    # xjtu.read_all()
+    #
+    # hust = HUSTdata(args=args)
+    # hust.read_all()
+    #
     mit = MITdata(args=args)
+    mit.read_one_batch(batch=1)
     loader = mit.read_all()
 
+    # tju = HUSTdata(args=args)
+    # loader = tju.read_all()
     train_loader = loader['train']
-    valid_loader = loader['valid']
     test_loader = loader['test']
+    valid_loader = loader['valid']
+    all_loader = loader['test_3']
+    print('train_loader:',len(train_loader),'test_loader:',len(test_loader),'valid_loader:',len(valid_loader),'all_loader:',len(all_loader))
 
-    print('train_loader:',
-          len(train_loader) if train_loader else 0,
-          'valid_loader:',
-          len(valid_loader) if valid_loader else 0,
-          'test_loader:',
-          len(test_loader) if test_loader else 0)
+    for iter,(x1,x2,y1,y2) in enumerate(train_loader):
+        print('x1 shape:',x1.shape)
+        print('x2 shape:',x2.shape)
+        print('y1 shape:',y1.shape)
+        print('y2 shape:',y2.shape)
+        print('y1 max:',y1.max())
+        break
 
-    # Example iteration over train_loader (if not None)
-    if train_loader is not None:
-        for i, (x1, x2, y1, y2) in enumerate(train_loader):
-            print('Batch:', i)
-            print('x1 shape:', x1.shape)
-            print('x2 shape:', x2.shape)
-            print('y1 shape:', y1.shape)
-            print('y2 shape:', y2.shape)
-            break
+
+
+
+
+
+

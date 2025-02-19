@@ -4,6 +4,7 @@ import numpy as np
 from torch.autograd import grad
 from utils.util import AverageMeter,get_logger,eval_metrix
 import os
+from tqdm import tqdm
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 # device = 'cpu'
 
@@ -89,6 +90,7 @@ class Solution_u(nn.Module):
 def count_parameters(model):
     count = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print('The model has {} trainable parameters'.format(count))
+    return count
 
 
 class LR_Scheduler(object):
@@ -239,7 +241,7 @@ class PINN(nn.Module):
         loss1_meter = AverageMeter()
         loss2_meter = AverageMeter()
         loss3_meter = AverageMeter()
-        for iter,(x1,x2,y1,y2) in enumerate(dataloader):
+        for iter,(x1,x2,y1,y2) in tqdm(enumerate(dataloader)):
             x1,x2,y1,y2 = x1.to(device),x2.to(device),y1.to(device),y2.to(device)
             u1,f1 = self.forward(x1)
             u2,f2 = self.forward(x2)
@@ -251,7 +253,7 @@ class PINN(nn.Module):
             f_target = torch.zeros_like(f1)
             loss2 = 0.5*self.loss_func(f1,f_target) + 0.5*self.loss_func(f2,f_target)
 
-            # physics loss  u2-u1<0, considering capacity regeneration
+            # physics loss  y2-y1<0
             loss3 = self.relu(torch.mul(u2-u1,y1-y2)).sum()
 
             # total loss
@@ -280,6 +282,7 @@ class PINN(nn.Module):
         early_stop = 0
         mae = 10
         for e in range(1,self.args.epochs+1):
+            print(f"Epoch {e}/{self.args.epochs}")
             early_stop += 1
             loss1,loss2,loss3 = self.train_one_epoch(e,trainloader)
             current_lr = self.scheduler.step()
@@ -305,10 +308,10 @@ class PINN(nn.Module):
                     np.save(os.path.join(self.args.save_folder, 'true_label.npy'), true_label)
                     np.save(os.path.join(self.args.save_folder, 'pred_label.npy'), pred_label)
                 ##################################################################################
-            if self.args.early_stop is not None and early_stop > self.args.early_stop:
-                info = 'early stop at epoch {}'.format(e)
-                self.logger.info(info)
-                break
+            # if self.args.early_stop is not None and early_stop > self.args.early_stop:
+            #     info = 'early stop at epoch {}'.format(e)
+            #     self.logger.info(info)
+            #     break
         self.clear_logger()
         if self.args.save_folder is not None:
             torch.save(self.best_model,os.path.join(self.args.save_folder,'model.pth'))
