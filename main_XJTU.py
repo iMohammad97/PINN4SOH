@@ -10,6 +10,7 @@ from tqdm import tqdm
 from itertools import product
 import pickle
 import json
+import pandas as pd
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -56,6 +57,86 @@ def load_data2(args,small_sample=None):
                   'valid': train_loader['valid'],
                   'test': test_loader['test']}
     return dataloader
+
+def grid_seach_v2():
+    args = get_args()
+    batches = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
+    main_results_dir = 'our-experiments-3'
+    if not os.path.exists(main_results_dir):
+        os.makedirs(main_results_dir)
+    
+    df = pd.read_csv("our-experiments-2/comparison-2.csv")
+
+    df = df.head(20)
+
+    permutations = []
+    for idx, row in df.iterrows():
+        architecture_args = {}
+        architecture_args["spinn_enabled"] = {
+            "solution_u": True if row["spinn_enabled_solution_u"] == "True" else False,
+            "dynamical_F": True if row["spinn_enabled_dynamical_F"] == "True" else False
+        }
+        architecture_args["dynamical_F_args"] = {
+            "layers_num": int(row["dynamical_F_args_layers_num"]),
+            "hidden_dim": int(row["dynamical_F_args_hidden_dim"]),
+            "dropout": 0,
+            "activation": "sin"
+        }
+        architecture_args["solution_u_args"] = {
+            "layers_num": int(row["solution_u_args_layers_num"]),
+            "hidden_dim": int(row["solution_u_args_hidden_dim"]),
+            "dropout": 0,
+            "activation": "sin"
+        }
+        architecture_args["dynamical_F_subnet_args"] = {
+            "output_dim": int(row["dynamical_F_subnet_args_output_dim"]),
+            "layers_num": int(row["dynamical_F_subnet_args_layers_num"]),
+            "hidden_dim":int(row["dynamical_F_subnet_args_hidden_dim"]),
+            "dropout": 0,
+            "activation": "sin"
+        }
+        architecture_args["solution_u_subnet_args"] = {
+            "output_dim": int(row["solution_u_subnet_args_output_dim"]),
+            "layers_num": int(row["solution_u_subnet_args_layers_num"]),
+            "hidden_dim": int(row["solution_u_subnet_args_hidden_dim"]),
+            "dropout": 0,
+            "activation": "sin"
+        }
+        permutations.append(architecture_args)
+    
+    for idx, architecture_args in enumerate(permutations, 1):
+        # Iterate through all batch configurations
+        for i, batch in enumerate(batches):
+            print(f'Doing batch {i+1} with {architecture_args}')
+            setattr(args, 'batch', batch)  # Set current batch
+
+            # Dummy loop, iterate as needed
+            for e in range(1):
+                save_folder = f'{main_results_dir}/results of reviewer-{idx}/XJTU results/{i}-{i}'
+                if not os.path.exists(save_folder):
+                    os.makedirs(save_folder)
+                log_dir = 'logging.txt'
+                setattr(args, "save_folder", save_folder)
+                setattr(args, "log_dir", log_dir)
+
+                print("Loading data...")
+                dataloader = load_data(args)
+
+                # Initialize model
+                spinn = SPINN(args, x_dim=17, architecture_args=architecture_args)
+                print("---------------XXXXXXXX_________________")
+                num_params = count_parameters(spinn)
+
+                print("Training...")
+                spinn.Train(trainloader=dataloader['train'], validloader=dataloader['valid'], testloader=dataloader['test'])
+
+                # Write the number of parameters to a file
+                with open(f"{main_results_dir}/results of reviewer-{idx}/XJTU results/{i}-{i}/num_param.txt", 'w') as f:
+                    f.write(str(num_params))
+                with open(f"{main_results_dir}/results of reviewer-{idx}/XJTU results/{i}-{i}/hyper_params.json", 'w') as json_file:
+                    json.dump(architecture_args, json_file, indent=4)
+
+
 
 
 def grid_search():
@@ -233,8 +314,8 @@ def grid_search_constructor():
 # Call the function
 def main():
     # grid_search_constructor()
-    # grid_search()
-    main2()
+    grid_seach_v2()
+    # main2()
 def main2():
     args = get_args()
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
