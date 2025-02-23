@@ -291,3 +291,38 @@ data path:
 2025-02-22 13:44 - function:Train - INFO - [Train] epoch:120, lr:0.000203, total loss:0.000191
 2025-02-22 13:44 - function:Train - INFO - [Valid] epoch:120, MSE: 2.953718649223447e-05
 2025-02-22 13:44 - function:Train - INFO - [Test] MSE: 0.00003335, MAE: 0.004338, MAPE: 0.004740, RMSE: 0.005775
+data path:
+['data/XJTU data/2C_battery-3.csv', 'data/XJTU data/2C_battery-2.csv', 'data/XJTU data/2C_battery-1.csv', 'data/XJTU data/2C_battery-5.csv', 'data/XJTU data/2C_battery-6.csv', 'data/XJTU data/2C_battery-7.csv']
+data path:
+['data/XJTU data/2C_battery-8.csv', 'data/XJTU data/2C_battery-4.csv']
+2025-02-22 20:25 - function:_save_args - INFO - Args:
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	data:XJTU
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	train_batch:0
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	test_batch:1
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	batch:2C
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	batch_size:256
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	epochs:120
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	early_stop:20
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	lr:0.01
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	alpha:0.7
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	beta:20
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-02-22 20:25 - function:_save_args - CRITICAL - 	save_folder:our-experiments-3/results of reviewer-1/XJTU results/0-0
+2025-02-22 20:25 - function:Train - INFO - [Train] epoch:1, lr:0.002000, total loss:0.555026
+2025-02-22 20:25 - function:Train - INFO - [Valid] epoch:1, MSE: 0.019284239038825035
+2025-02-22 20:25 - function:Train - INFO - [Test] MSE: 0.02883304, MAE: 0.115914, MAPE: 0.193185, RMSE: 0.169803
+2025-02-22 20:25 - function:Train - INFO - [Train] epoch:2, lr:0.002276, total loss:0.169694
+2025-02-22 20:25 - function:Train - INFO - [Valid] epoch:2, MSE: 0.01942509599030018
+2025-02-22 20:25 - function:Train - INFO - [Train] epoch:3, lr:0.002552, total loss:0.100986
+2025-02-22 20:25 - function:Train - INFO - [Valid] epoch:3, MSE: 0.008083675988018513
+2025-02-22 20:25 - function:Train - INFO - [Test] MSE: 0.00815895, MAE: 0.068461, MAPE: 0.066991, RMSE: 0.090327
+2025-02-22 20:25 - function:Train - INFO - [Train] epoch:4, lr:0.002828, total loss:0.063968
+2025-02-22 20:25 - function:Train - INFO - [Valid] epoch:4, MSE: 0.003372924868017435
+2025-02-22 20:25 - function:Train - INFO - [Test] MSE: 0.00398343, MAE: 0.050324, MAPE: 0.057536, RMSE: 0.063114
