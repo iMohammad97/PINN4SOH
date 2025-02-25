@@ -412,7 +412,7 @@ def bayesian_optimization(alpha, beta):
             rmses.append(calc_rmse(save_folder))
         
                 
-    return np.mean(rmses)
+    return -np.mean(rmses)
 
 def find_best_alpha_beta():
     pbounds = {
@@ -431,6 +431,7 @@ def find_best_alpha_beta():
         init_points=10,   # random exploration steps
         n_iter=40,       # iterations of optimization
     )
+    
 
     # Print the best parameters and the corresponding accuracy
     print("Best parameters found: ", optimizer.max)
