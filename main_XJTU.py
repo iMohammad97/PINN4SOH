@@ -26,7 +26,7 @@ def calc_rmse(path):
     return rmse
 
 def load_data(args,small_sample=None):
-    root = '/content/PINN4SOH/data/XJTU data'
+    root = '/kaggle/working/PINN4SOH/data/XJTU data'
     data = XJTUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -328,7 +328,7 @@ def bayesian_optimization(alpha, beta):
     if not os.path.exists(main_results_dir):
         os.makedirs(main_results_dir)
     
-    df = pd.read_csv("/content/PINN4SOH/our-experiments-2/comparison-2.csv")
+    df = pd.read_csv("/kaggle/working/PINN4SOH/our-experiments-2/comparison-2.csv")
 
     df = df.head(1)
 
