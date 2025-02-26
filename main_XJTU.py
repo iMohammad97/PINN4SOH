@@ -26,7 +26,7 @@ def calc_rmse(path):
     return rmse
 
 def load_data(args,small_sample=None):
-    root = 'data/XJTU data'
+    root = '/content/PINN4SOH/data/XJTU data'
     data = XJTUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -328,7 +328,7 @@ def bayesian_optimization(alpha, beta):
     if not os.path.exists(main_results_dir):
         os.makedirs(main_results_dir)
     
-    df = pd.read_csv("our-experiments-2/comparison-2.csv")
+    df = pd.read_csv("/content/PINN4SOH/our-experiments-2/comparison-2.csv")
 
     df = df.head(1)
 
@@ -506,7 +506,7 @@ def main2():
                 "dynamical_F_subnet_args" : dynamical_F_subnet_args,
                 "spinn_enabled" : spinn_enabled
             }
-            spinn = SPINN(args, x_dim=17, architecture_args=architecture_args)
+            spinn = SPINN(args, x_dim=17, architecture_args=architecture_args).cuda()
             print("---------------XXXXXXXX_________________")
             count_parameters(spinn)
             

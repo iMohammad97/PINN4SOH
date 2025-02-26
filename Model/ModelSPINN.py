@@ -56,6 +56,7 @@ class Subnet(nn.Module):
 
     def forward(self,x):
         assert x.shape[1] == self.input_dim
+        x = x.to(device)
         x = self.net(x)
         return x
 
@@ -87,6 +88,7 @@ class Solution_u(nn.Module):
         self._init()
 
     def forward(self, x):
+        x = x.to(device)
         x = self.net(x)
         return x
 
@@ -107,17 +109,18 @@ class Solution_u_spinn(nn.Module):
         for _ in range(input_dim):
             self.subnets.append(Subnet(**subnet_args))
         # Define a trainable weight vector with input_dim elements
-        self.weights = nn.Parameter(torch.ones(input_dim))
+        self.weights = nn.Parameter(torch.ones(input_dim).to(device))
         self._init_()
 
     def forward(self, x):
         assert x.shape[1] == self.input_dim
+        x = x.to(device)
         outs = []
         for idx, net in enumerate(self.subnets):
             outs.append(net(x[:, idx].unsqueeze(1)))
         
         # Combine outputs using the trainable weights
-        weighted_outs = [w * out for w, out in zip(self.weights, outs)]
+        weighted_outs = [w * out for w, out in zip(self.weights.to(device), outs)]
         result = sum(weighted_outs)
         result = result.sum(dim=1, keepdim=True)
         return result
@@ -181,18 +184,19 @@ class Dynamical_F_spinn(nn.Module):
         for _ in range(self.input_dim):
             self.subnets.append(Subnet(**subnet_args))
         # Define a trainable weight vector with input_dim elements
-        self.weights = nn.Parameter(torch.ones(self.input_dim))
+        self.weights = nn.Parameter(torch.ones(self.input_dim).to(device))
         self._init_()
         
 
     def forward(self, x):
         assert x.shape[1] == self.input_dim
+        x = x.to(device)  # Ensure input is on GPU
         outs = []
         for idx, net in enumerate(self.subnets):
             outs.append(net(x[:, idx].unsqueeze(1)))
         
         # Combine outputs using the trainable weights
-        weighted_outs = [w * out for w, out in zip(self.weights, outs)]
+        weighted_outs = [w * out for w, out in zip(self.weights.to(device), outs)]
         result = sum(weighted_outs)
         result = result.sum(dim=1, keepdim=True)
         return result
@@ -312,6 +316,7 @@ class SPINN(nn.Module):
         with torch.no_grad():
             for iter,(x1,_,y1,_) in enumerate(testloader):
                 x1 = x1.to(device)
+                # y1 = y1.to(device)  # Move labels to GPU
                 u1 = self.predict(x1)
                 true_label.append(y1)
                 pred_label.append(u1.cpu().detach().numpy())
@@ -327,11 +332,15 @@ class SPINN(nn.Module):
         with torch.no_grad():
             for iter,(x1,_,y1,_) in enumerate(validloader):
                 x1 = x1.to(device)
+                # y1 = y1.to(device)  # Move y1 to GPU
                 u1 = self.predict(x1)
                 true_label.append(y1)
                 pred_label.append(u1.cpu().detach().numpy())
         pred_label = np.concatenate(pred_label,axis=0)
         true_label = np.concatenate(true_label,axis=0)
+        # # Convert to PyTorch tensors before computing loss
+        # pred_label = torch.tensor(pred_label, device=device)
+        # true_label = torch.tensor(true_label, device=device)
         mse = self.loss_func(torch.tensor(pred_label),torch.tensor(true_label))
         return mse.item()
 
