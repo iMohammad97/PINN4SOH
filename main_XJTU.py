@@ -552,7 +552,7 @@ def get_args2(alpha, beta):
 
     # scheduler related
     parser.add_argument('--epochs', type=int, default=120, help='epoch')
-    parser.add_argument('--early_stop', type=int, default=20, help='early stop')
+    parser.add_argument('--early_stop', type=int, default=30, help='early stop')
     parser.add_argument('--warmup_epochs', type=int, default=30, help='warmup epoch')
     parser.add_argument('--warmup_lr', type=float, default=0.002, help='warmup lr')
     parser.add_argument('--lr', type=float, default=0.01, help='base lr')
