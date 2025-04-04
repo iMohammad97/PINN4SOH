@@ -54,6 +54,8 @@ class Results:
 
         for i in range(len(lines)):
             line = lines[i]
+            if lines[i] == lines[i-1]:
+                continue
             if '[train] epoch:1 iter:1 data' in line:
                 train_total_loss.append(float(line.split('total loss:')[1].split('\n')[0]))
             elif '[Train]' in line:
@@ -204,8 +206,8 @@ class Results:
 
 
 if __name__ == '__main__':
-    root = '../results of reviewer/XJTU results/'
-    writer = pd.ExcelWriter('../results of reviewer/XJTU_results.xlsx')
+    root = 'results of reviewer/XJTU results/'
+    writer = pd.ExcelWriter('results of reviewer/XJTU_results.xlsx')
 
     results = Results(root)
     for batch in range(6):
@@ -213,7 +215,7 @@ if __name__ == '__main__':
         df_battery_mean.to_excel(writer,sheet_name='battery_mean_{}'.format(batch),index=False)
         # df_experiment_mean = results.get_experiments_mean(train_batch=batch,test_batch=batch,total_experiment=10)
         # df_experiment_mean.to_excel(writer,sheet_name='experiment_mean_{}'.format(batch),index=False)
-    writer.save()
+    writer._save()
 
 
 

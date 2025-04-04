@@ -26,7 +26,7 @@ def calc_rmse(path):
     return rmse
 
 def load_data(args,small_sample=None):
-    root = '/kaggle/working/PINN4SOH/data/XJTU data'
+    root = 'data/XJTU data'
     data = XJTUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -74,7 +74,7 @@ def grid_seach_v2():
     main_results_dir = 'our-experiments-3'
     if not os.path.exists(main_results_dir):
         os.makedirs(main_results_dir)
-    
+
     df = pd.read_csv("our-experiments-2/comparison-2.csv")
 
     df = df.head(20)
@@ -113,7 +113,7 @@ def grid_seach_v2():
             "activation": "sin"
         }
         permutations.append(architecture_args)
-    
+
     for idx, architecture_args in enumerate(permutations, 1):
         # Iterate through all batch configurations
         for i, batch in enumerate(batches):
@@ -156,7 +156,7 @@ def grid_search():
     main_results_dir = 'our-experiments-2'
     if not os.path.exists(main_results_dir):
         os.makedirs(main_results_dir)
-    
+
     with open('permutations.pkl', 'rb') as file:
         permutations = pickle.load(file)
 
@@ -263,21 +263,21 @@ def grid_search_constructor():
         # Skip combinations where both are False
         if not (solution_u_enabled or dynamical_F_enabled):
             continue
-        
+
         if solution_u_enabled:
             solution_u_args_list = [None]
             solution_u_subnet_args_list = solution_u_subnet_args_combinations
         else:
             solution_u_args_list = solution_u_args_combinations
             solution_u_subnet_args_list = [None]
-            
+
         if dynamical_F_enabled:
             dynamical_F_args_list = [None]
             dynamical_F_subnet_args_list = dynamical_F_subnet_args_combinations
         else:
             dynamical_F_args_list = dynamical_F_args_combinations
             dynamical_F_subnet_args_list = [None]
-        
+
         for solution_u_args in solution_u_args_list:
             for dynamical_F_args in dynamical_F_args_list:
                 for solution_u_subnet_args in solution_u_subnet_args_list:
@@ -327,8 +327,8 @@ def bayesian_optimization(alpha, beta):
     main_results_dir = 'our-experiments-4'
     if not os.path.exists(main_results_dir):
         os.makedirs(main_results_dir)
-    
-    df = pd.read_csv("/kaggle/working/PINN4SOH/our-experiments-2/comparison-2.csv")
+
+    df = pd.read_csv("our-experiments-2/comparison-2.csv")
 
     df = df.head(1)
 
@@ -367,7 +367,7 @@ def bayesian_optimization(alpha, beta):
         }
         permutations.append(architecture_args)
 
-    
+
     rmses = []
 
     idx = 1
@@ -375,7 +375,7 @@ def bayesian_optimization(alpha, beta):
     while os.path.exists(save_folder):
         idx += 1
         save_folder = f'{main_results_dir}/results of reviewer-{idx}/XJTU results/'
-    
+
     for _, architecture_args in enumerate(permutations, 1):
         architecture_args["alpha"] = alpha
         architecture_args["beta"] = beta
@@ -410,14 +410,14 @@ def bayesian_optimization(alpha, beta):
             with open(f"{main_results_dir}/results of reviewer-{idx}/XJTU results/{i}-{i}/num_param.txt", 'w') as f:
                 f.write(str(num_params))
             rmses.append(calc_rmse(save_folder))
-        
-                
+
+
     return -np.mean(rmses)
 
 def find_best_alpha_beta():
     pbounds = {
-        'alpha': (0, 50), 
-        'beta': (0, 50), 
+        'alpha': (0, 50),
+        'beta': (0, 50),
     }
     # Initialize the Bayesian Optimizer
     optimizer = BayesianOptimization(
@@ -428,10 +428,10 @@ def find_best_alpha_beta():
 
     # Optimize the function
     optimizer.maximize(
-        init_points=10,   # random exploration steps
-        n_iter=40,       # iterations of optimization
+        init_points=20,   # random exploration steps
+        n_iter=50,       # iterations of optimization
     )
-    
+
 
     # Print the best parameters and the corresponding accuracy
     print("Best parameters found: ", optimizer.max)
@@ -443,8 +443,9 @@ def find_best_alpha_beta():
 def main():
     # grid_search_constructor()
     # grid_seach_v2()
-    # main2()
-    find_best_alpha_beta()
+    main2()
+    # find_best_alpha_beta()
+
 def main2():
     args = get_args()
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
@@ -452,8 +453,8 @@ def main2():
         print(f'doing batch {i+1}')
         batch = batchs[i]
         setattr(args, 'batch', batch)
-        for e in range(1):
-            save_folder = 'results of reviewer/XJTU results/' + str(i) + '-' + str(i)
+        for e in range(10):
+            save_folder = 'results of reviewer/XJTU results/' + str(i) + '-' + str(i) + '/Experiment' + str(e + 1)
             if not os.path.exists(save_folder):
                 os.makedirs(save_folder)
             log_dir = 'logging.txt'
@@ -461,40 +462,30 @@ def main2():
             setattr(args, "log_dir", log_dir)
 
             print("loading data...")
-            dataloader = load_data(args)
+            dataloader = load_data2(args)
             pinn = PINN(args)
             print("---------------XXXXXXXX_________________")
             count_parameters(pinn)
             # for p in pinn.parameters():
             #     print(p)
             # break
-            
+
             solution_u_subnet_args = {
-                "output_dim" : 10, 
-                "layers_num" : 5, 
+                "output_dim" : 10,
+                "layers_num" : 5,
                 "hidden_dim" : 15,
                 "dropout" : 0,
                 "activation" : "leaky-relu"
             }
             dynamical_F_subnet_args = {
-                "output_dim" : 10, 
-                "layers_num" : 5, 
+                "output_dim" : 10,
+                "layers_num" : 5,
                 "hidden_dim" : 15,
                 "dropout" : 0,
                 "activation" : "leaky-relu"
             }
-            solution_u_args = {
-                "layers_num" : 3,
-                "hidden_dim" : 60,
-                "dropout" : 0.2,
-                "activation" : "sin"
-            }
-            dynamical_F_args = {
-                "layers_num" : 3, 
-                "hidden_dim" : 60, 
-                "dropout" : 0.2,
-                "activation" : "sin"
-            }
+            solution_u_args = None
+            dynamical_F_args = None
             spinn_enabled = {
                 "solution_u" : True,
                 "dynamical_F" : True
@@ -509,8 +500,8 @@ def main2():
             spinn = SPINN(args, x_dim=17, architecture_args=architecture_args).cuda()
             print("---------------XXXXXXXX_________________")
             count_parameters(spinn)
-            
-            print("training...")    
+
+            print("training...")
             spinn.Train(trainloader=dataloader['train'],validloader=dataloader['valid'],testloader=dataloader['test'])
 
 def small_sample():
@@ -589,8 +580,8 @@ def get_args():
     parser.add_argument('--normalization_method', type=str, default='min-max', help='min-max,z-score')
 
     # scheduler related
-    parser.add_argument('--epochs', type=int, default=120, help='epoch')
-    parser.add_argument('--early_stop', type=int, default=20, help='early stop')
+    parser.add_argument('--epochs', type=int, default=200, help='epoch')
+    parser.add_argument('--early_stop', type=int, default=30, help='early stop')
     parser.add_argument('--warmup_epochs', type=int, default=30, help='warmup epoch')
     parser.add_argument('--warmup_lr', type=float, default=0.002, help='warmup lr')
     parser.add_argument('--lr', type=float, default=0.01, help='base lr')
@@ -602,8 +593,8 @@ def get_args():
     parser.add_argument('--F_hidden_dim', type=int, default=60, help='the hidden dim of F')
 
     # loss related
-    parser.add_argument('--alpha', type=float, default=19.97, help='loss = l_data + alpha * l_PDE + beta * l_physics')
-    parser.add_argument('--beta', type=float, default=0.108, help='loss = l_data + alpha * l_PDE + beta * l_physics')
+    parser.add_argument('--alpha', type=float, default=0.08549401305482651, help='loss = l_data + alpha * l_PDE + beta * l_physics')
+    parser.add_argument('--beta', type=float, default=6.040426381151848, help='loss = l_data + alpha * l_PDE + beta * l_physics')
 
     parser.add_argument('--log_dir', type=str, default='text log.txt', help='log dir, if None, do not save')
     parser.add_argument('--save_folder', type=str, default='results of reviewer/XJTU results', help='save folder')

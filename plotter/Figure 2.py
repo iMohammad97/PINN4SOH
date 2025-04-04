@@ -3,10 +3,11 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import scienceplots
+# plt.style.use(['science','nature', 'no-latex'])
 plt.style.use(['science','nature'])
 from matplotlib.backends.backend_pdf import PdfPages
 
-root = '../data/XJTU data/'
+root = 'data/XJTU data/'
 # pdf = PdfPages('xjtu trajectory.pdf')
 files = os.listdir(root)
 fig = plt.figure(figsize=(4,2),dpi=200)
