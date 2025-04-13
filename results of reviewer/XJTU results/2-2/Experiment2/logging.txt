@@ -1,0 +1,1312 @@
+data path:
+['data/XJTU data\\R2.5_battery-1.csv', 'data/XJTU data\\R2.5_battery-2.csv', 'data/XJTU data\\R2.5_battery-3.csv', 'data/XJTU data\\R2.5_battery-5.csv', 'data/XJTU data\\R2.5_battery-6.csv', 'data/XJTU data\\R2.5_battery-7.csv']
+data path:
+['data/XJTU data\\R2.5_battery-4.csv', 'data/XJTU data\\R2.5_battery-8.csv']
+2025-04-12 18:15 - function:_save_args - INFO - Args:
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:15 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment2
+Epoch 1/200
+[Train] epoch:1, lr:0.002000, total loss:0.889222
+[Valid] epoch:1, MSE: 0.857235
+[Test] MSE:0.85810876, MAE:0.924943, MAPE:97.888687, RMSE:0.926342
+Epoch 2/200
+[Train] epoch:2, lr:0.002276, total loss:0.735249
+[Valid] epoch:2, MSE: 0.520041
+[Test] MSE:0.52399188, MAE:0.721362, MAPE:76.246384, RMSE:0.723873
+Epoch 3/200
+[Train] epoch:3, lr:0.002552, total loss:0.297008
+[Valid] epoch:3, MSE: 0.021605
+[Test] MSE:0.02477533, MAE:0.140327, MAPE:14.896832, RMSE:0.157402
+Epoch 4/200
+[Train] epoch:4, lr:0.002828, total loss:0.116434
+[Valid] epoch:4, MSE: 0.041584
+Epoch 5/200
+[Train] epoch:5, lr:0.003103, total loss:0.042923
+[Valid] epoch:5, MSE: 0.039779
+Epoch 6/200
+[Train] epoch:6, lr:0.003379, total loss:0.040052
+[Valid] epoch:6, MSE: 0.007715
+[Test] MSE:0.01007650, MAE:0.094246, MAPE:9.947989, RMSE:0.100382
+Epoch 7/200
+[Train] epoch:7, lr:0.003655, total loss:0.015113
+[Valid] epoch:7, MSE: 0.010259
+Epoch 8/200
+[Train] epoch:8, lr:0.003931, total loss:0.011384
+[Valid] epoch:8, MSE: 0.004298
+[Test] MSE:0.00575381, MAE:0.071331, MAPE:7.519062, RMSE:0.075854
+Epoch 9/200
+[Train] epoch:9, lr:0.004207, total loss:0.008444
+[Valid] epoch:9, MSE: 0.001660
+[Test] MSE:0.00223995, MAE:0.042717, MAPE:4.558511, RMSE:0.047328
+Epoch 10/200
+[Train] epoch:10, lr:0.004483, total loss:0.006076
+[Valid] epoch:10, MSE: 0.001636
+[Test] MSE:0.00136418, MAE:0.021731, MAPE:2.451029, RMSE:0.036935
+Epoch 11/200
+[Train] epoch:11, lr:0.004759, total loss:0.004779
+[Valid] epoch:11, MSE: 0.001936
+Epoch 12/200
+[Train] epoch:12, lr:0.005034, total loss:0.004086
+[Valid] epoch:12, MSE: 0.000926
+[Test] MSE:0.00075515, MAE:0.016824, MAPE:1.880317, RMSE:0.027480
+Epoch 13/200
+[Train] epoch:13, lr:0.005310, total loss:0.003733
+[Valid] epoch:13, MSE: 0.000898
+[Test] MSE:0.00118127, MAE:0.031681, MAPE:3.369349, RMSE:0.034370
+Epoch 14/200
+[Train] epoch:14, lr:0.005586, total loss:0.003138
+[Valid] epoch:14, MSE: 0.000582
+[Test] MSE:0.00052294, MAE:0.016064, MAPE:1.760424, RMSE:0.022868
+Epoch 15/200
+[Train] epoch:15, lr:0.005862, total loss:0.002948
+[Valid] epoch:15, MSE: 0.000633
+Epoch 16/200
+[Train] epoch:16, lr:0.006138, total loss:0.002441
+[Valid] epoch:16, MSE: 0.000432
+[Test] MSE:0.00037744, MAE:0.014309, MAPE:1.555214, RMSE:0.019428
+Epoch 17/200
+[Train] epoch:17, lr:0.006414, total loss:0.002357
+[Valid] epoch:17, MSE: 0.000406
+[Test] MSE:0.00041538, MAE:0.017125, MAPE:1.838636, RMSE:0.020381
+Epoch 18/200
+[Train] epoch:18, lr:0.006690, total loss:0.002368
+[Valid] epoch:18, MSE: 0.000389
+[Test] MSE:0.00036101, MAE:0.015208, MAPE:1.638835, RMSE:0.019000
+Epoch 19/200
+[Train] epoch:19, lr:0.006966, total loss:0.002254
+[Valid] epoch:19, MSE: 0.000369
+[Test] MSE:0.00039463, MAE:0.016845, MAPE:1.811423, RMSE:0.019865
+Epoch 20/200
+[Train] epoch:20, lr:0.007241, total loss:0.002046
+[Valid] epoch:20, MSE: 0.000303
+[Test] MSE:0.00027649, MAE:0.012055, MAPE:1.309153, RMSE:0.016628
+Epoch 21/200
+[Train] epoch:21, lr:0.007517, total loss:0.001794
+[Valid] epoch:21, MSE: 0.000349
+Epoch 22/200
+[Train] epoch:22, lr:0.007793, total loss:0.001666
+[Valid] epoch:22, MSE: 0.000292
+[Test] MSE:0.00027784, MAE:0.012593, MAPE:1.366228, RMSE:0.016668
+Epoch 23/200
+[Train] epoch:23, lr:0.008069, total loss:0.001737
+[Valid] epoch:23, MSE: 0.000363
+Epoch 24/200
+[Train] epoch:24, lr:0.008345, total loss:0.001673
+[Valid] epoch:24, MSE: 0.000272
+[Test] MSE:0.00030695, MAE:0.014232, MAPE:1.536013, RMSE:0.017520
+Epoch 25/200
+[Train] epoch:25, lr:0.008621, total loss:0.001656
+[Valid] epoch:25, MSE: 0.000379
+Epoch 26/200
+[Train] epoch:26, lr:0.008897, total loss:0.001546
+[Valid] epoch:26, MSE: 0.000251
+[Test] MSE:0.00026350, MAE:0.012700, MAPE:1.371294, RMSE:0.016233
+Epoch 27/200
+[Train] epoch:27, lr:0.009172, total loss:0.001379
+[Valid] epoch:27, MSE: 0.000295
+Epoch 28/200
+[Train] epoch:28, lr:0.009448, total loss:0.001386
+[Valid] epoch:28, MSE: 0.000252
+Epoch 29/200
+[Train] epoch:29, lr:0.009724, total loss:0.001258
+[Valid] epoch:29, MSE: 0.000259
+Epoch 30/200
+[Train] epoch:30, lr:0.010000, total loss:0.001470
+[Valid] epoch:30, MSE: 0.000245
+[Test] MSE:0.00022855, MAE:0.010247, MAPE:1.125650, RMSE:0.015118
+Epoch 31/200
+[Train] epoch:31, lr:0.010000, total loss:0.001289
+[Valid] epoch:31, MSE: 0.000291
+Epoch 32/200
+[Train] epoch:32, lr:0.009999, total loss:0.001362
+[Valid] epoch:32, MSE: 0.000197
+[Test] MSE:0.00020262, MAE:0.010740, MAPE:1.161045, RMSE:0.014234
+Epoch 33/200
+[Train] epoch:33, lr:0.009997, total loss:0.001112
+[Valid] epoch:33, MSE: 0.000276
+Epoch 34/200
+[Train] epoch:34, lr:0.009992, total loss:0.001055
+[Valid] epoch:34, MSE: 0.000304
+Epoch 35/200
+[Train] epoch:35, lr:0.009987, total loss:0.000961
+[Valid] epoch:35, MSE: 0.000224
+Epoch 36/200
+[Train] epoch:36, lr:0.009979, total loss:0.000911
+[Valid] epoch:36, MSE: 0.000242
+Epoch 37/200
+[Train] epoch:37, lr:0.009970, total loss:0.000866
+[Valid] epoch:37, MSE: 0.000286
+Epoch 38/200
+[Train] epoch:38, lr:0.009959, total loss:0.000852
+[Valid] epoch:38, MSE: 0.000357
+Epoch 39/200
+[Train] epoch:39, lr:0.009947, total loss:0.000859
+[Valid] epoch:39, MSE: 0.000248
+Epoch 40/200
+[Train] epoch:40, lr:0.009932, total loss:0.000823
+[Valid] epoch:40, MSE: 0.000222
+Epoch 41/200
+[Train] epoch:41, lr:0.009917, total loss:0.000799
+[Valid] epoch:41, MSE: 0.000284
+Epoch 42/200
+[Train] epoch:42, lr:0.009899, total loss:0.000738
+[Valid] epoch:42, MSE: 0.000254
+Epoch 43/200
+[Train] epoch:43, lr:0.009880, total loss:0.000624
+[Valid] epoch:43, MSE: 0.000194
+[Test] MSE:0.00017454, MAE:0.009743, MAPE:1.051685, RMSE:0.013211
+Epoch 44/200
+[Train] epoch:44, lr:0.009859, total loss:0.000542
+[Valid] epoch:44, MSE: 0.000145
+[Test] MSE:0.00014945, MAE:0.009086, MAPE:0.984004, RMSE:0.012225
+Epoch 45/200
+[Train] epoch:45, lr:0.009837, total loss:0.000487
+[Valid] epoch:45, MSE: 0.000155
+Epoch 46/200
+[Train] epoch:46, lr:0.009813, total loss:0.000495
+[Valid] epoch:46, MSE: 0.000133
+[Test] MSE:0.00013993, MAE:0.008945, MAPE:0.965998, RMSE:0.011829
+Epoch 47/200
+[Train] epoch:47, lr:0.009787, total loss:0.000458
+[Valid] epoch:47, MSE: 0.000175
+Epoch 48/200
+[Train] epoch:48, lr:0.009760, total loss:0.000495
+[Valid] epoch:48, MSE: 0.000198
+Epoch 49/200
+[Train] epoch:49, lr:0.009731, total loss:0.000483
+[Valid] epoch:49, MSE: 0.000141
+Epoch 50/200
+[Train] epoch:50, lr:0.009701, total loss:0.000456
+[Valid] epoch:50, MSE: 0.000136
+Epoch 51/200
+[Train] epoch:51, lr:0.009669, total loss:0.000440
+[Valid] epoch:51, MSE: 0.000173
+Epoch 52/200
+[Train] epoch:52, lr:0.009636, total loss:0.000422
+[Valid] epoch:52, MSE: 0.000166
+Epoch 53/200
+[Train] epoch:53, lr:0.009601, total loss:0.000418
+[Valid] epoch:53, MSE: 0.000129
+[Test] MSE:0.00013456, MAE:0.008707, MAPE:0.940113, RMSE:0.011600
+Epoch 54/200
+[Train] epoch:54, lr:0.009564, total loss:0.000458
+[Valid] epoch:54, MSE: 0.000156
+Epoch 55/200
+[Train] epoch:55, lr:0.009526, total loss:0.000444
+[Valid] epoch:55, MSE: 0.000139
+Epoch 56/200
+[Train] epoch:56, lr:0.009486, total loss:0.000411
+[Valid] epoch:56, MSE: 0.000133
+Epoch 57/200
+[Train] epoch:57, lr:0.009445, total loss:0.000375
+[Valid] epoch:57, MSE: 0.000169
+Epoch 58/200
+[Train] epoch:58, lr:0.009403, total loss:0.000372
+[Valid] epoch:58, MSE: 0.000149
+Epoch 59/200
+[Train] epoch:59, lr:0.009359, total loss:0.000399
+[Valid] epoch:59, MSE: 0.000137
+Epoch 60/200
+[Train] epoch:60, lr:0.009313, total loss:0.000416
+[Valid] epoch:60, MSE: 0.000120
+[Test] MSE:0.00014221, MAE:0.009235, MAPE:0.994703, RMSE:0.011925
+Epoch 61/200
+[Train] epoch:61, lr:0.009266, total loss:0.000422
+[Valid] epoch:61, MSE: 0.000150
+Epoch 62/200
+[Train] epoch:62, lr:0.009218, total loss:0.000454
+[Valid] epoch:62, MSE: 0.000148
+Epoch 63/200
+[Train] epoch:63, lr:0.009168, total loss:0.000434
+[Valid] epoch:63, MSE: 0.000128
+Epoch 64/200
+[Train] epoch:64, lr:0.009117, total loss:0.000386
+[Valid] epoch:64, MSE: 0.000170
+Epoch 65/200
+[Train] epoch:65, lr:0.009064, total loss:0.000369
+[Valid] epoch:65, MSE: 0.000122
+Epoch 66/200
+[Train] epoch:66, lr:0.009010, total loss:0.000372
+[Valid] epoch:66, MSE: 0.000152
+Epoch 67/200
+[Train] epoch:67, lr:0.008955, total loss:0.000377
+[Valid] epoch:67, MSE: 0.000137
+Epoch 68/200
+[Train] epoch:68, lr:0.008898, total loss:0.000369
+[Valid] epoch:68, MSE: 0.000119
+[Test] MSE:0.00013384, MAE:0.008902, MAPE:0.958756, RMSE:0.011569
+Epoch 69/200
+[Train] epoch:69, lr:0.008841, total loss:0.000369
+[Valid] epoch:69, MSE: 0.000175
+Epoch 70/200
+[Train] epoch:70, lr:0.008782, total loss:0.000381
+[Valid] epoch:70, MSE: 0.000139
+Epoch 71/200
+[Train] epoch:71, lr:0.008721, total loss:0.000353
+[Valid] epoch:71, MSE: 0.000122
+Epoch 72/200
+[Train] epoch:72, lr:0.008660, total loss:0.000338
+[Valid] epoch:72, MSE: 0.000129
+Epoch 73/200
+[Train] epoch:73, lr:0.008597, total loss:0.000328
+[Valid] epoch:73, MSE: 0.000139
+Epoch 74/200
+[Train] epoch:74, lr:0.008533, total loss:0.000321
+[Valid] epoch:74, MSE: 0.000130
+Epoch 75/200
+[Train] epoch:75, lr:0.008467, total loss:0.000296
+[Valid] epoch:75, MSE: 0.000112
+[Test] MSE:0.00012822, MAE:0.008799, MAPE:0.947091, RMSE:0.011324
+Epoch 76/200
+[Train] epoch:76, lr:0.008401, total loss:0.000289
+[Valid] epoch:76, MSE: 0.000110
+[Test] MSE:0.00011958, MAE:0.008465, MAPE:0.910410, RMSE:0.010935
+Epoch 77/200
+[Train] epoch:77, lr:0.008334, total loss:0.000289
+[Valid] epoch:77, MSE: 0.000109
+[Test] MSE:0.00013848, MAE:0.009270, MAPE:0.993236, RMSE:0.011768
+Epoch 78/200
+[Train] epoch:78, lr:0.008265, total loss:0.000296
+[Valid] epoch:78, MSE: 0.000105
+[Test] MSE:0.00012110, MAE:0.008886, MAPE:0.951926, RMSE:0.011005
+Epoch 79/200
+[Train] epoch:79, lr:0.008195, total loss:0.000293
+[Valid] epoch:79, MSE: 0.000093
+[Test] MSE:0.00011468, MAE:0.008710, MAPE:0.932467, RMSE:0.010709
+Epoch 80/200
+[Train] epoch:80, lr:0.008125, total loss:0.000265
+[Valid] epoch:80, MSE: 0.000100
+Epoch 81/200
+[Train] epoch:81, lr:0.008053, total loss:0.000269
+[Valid] epoch:81, MSE: 0.000097
+Epoch 82/200
+[Train] epoch:82, lr:0.007980, total loss:0.000272
+[Valid] epoch:82, MSE: 0.000128
+Epoch 83/200
+[Train] epoch:83, lr:0.007906, total loss:0.000281
+[Valid] epoch:83, MSE: 0.000100
+Epoch 84/200
+[Train] epoch:84, lr:0.007832, total loss:0.000281
+[Valid] epoch:84, MSE: 0.000097
+Epoch 85/200
+[Train] epoch:85, lr:0.007756, total loss:0.000263
+[Valid] epoch:85, MSE: 0.000105
+Epoch 86/200
+[Train] epoch:86, lr:0.007680, total loss:0.000246
+[Valid] epoch:86, MSE: 0.000097
+Epoch 87/200
+[Train] epoch:87, lr:0.007602, total loss:0.000276
+[Valid] epoch:87, MSE: 0.000091
+[Test] MSE:0.00011855, MAE:0.008775, MAPE:0.938965, RMSE:0.010888
+Epoch 88/200
+[Train] epoch:88, lr:0.007524, total loss:0.000261
+[Valid] epoch:88, MSE: 0.000087
+[Test] MSE:0.00011812, MAE:0.008776, MAPE:0.937695, RMSE:0.010869
+Epoch 89/200
+[Train] epoch:89, lr:0.007445, total loss:0.000267
+[Valid] epoch:89, MSE: 0.000098
+Epoch 90/200
+[Train] epoch:90, lr:0.007365, total loss:0.000260
+[Valid] epoch:90, MSE: 0.000091
+Epoch 91/200
+[Train] epoch:91, lr:0.007284, total loss:0.000261
+[Valid] epoch:91, MSE: 0.000082
+[Test] MSE:0.00011616, MAE:0.008832, MAPE:0.944590, RMSE:0.010778
+Epoch 92/200
+[Train] epoch:92, lr:0.007203, total loss:0.000259
+[Valid] epoch:92, MSE: 0.000092
+Epoch 93/200
+[Train] epoch:93, lr:0.007121, total loss:0.000242
+[Valid] epoch:93, MSE: 0.000086
+Epoch 94/200
+[Train] epoch:94, lr:0.007038, total loss:0.000242
+[Valid] epoch:94, MSE: 0.000090
+Epoch 95/200
+[Train] epoch:95, lr:0.006954, total loss:0.000237
+[Valid] epoch:95, MSE: 0.000123
+Epoch 96/200
+[Train] epoch:96, lr:0.006870, total loss:0.000243
+[Valid] epoch:96, MSE: 0.000137
+Epoch 97/200
+[Train] epoch:97, lr:0.006785, total loss:0.000242
+[Valid] epoch:97, MSE: 0.000088
+Epoch 98/200
+[Train] epoch:98, lr:0.006700, total loss:0.000229
+[Valid] epoch:98, MSE: 0.000123
+Epoch 99/200
+[Train] epoch:99, lr:0.006614, total loss:0.000233
+[Valid] epoch:99, MSE: 0.000087
+Epoch 100/200
+[Train] epoch:100, lr:0.006528, total loss:0.000232
+[Valid] epoch:100, MSE: 0.000110
+Epoch 101/200
+[Train] epoch:101, lr:0.006441, total loss:0.000229
+[Valid] epoch:101, MSE: 0.000089
+Epoch 102/200
+[Train] epoch:102, lr:0.006354, total loss:0.000228
+[Valid] epoch:102, MSE: 0.000098
+Epoch 103/200
+[Train] epoch:103, lr:0.006266, total loss:0.000222
+[Valid] epoch:103, MSE: 0.000086
+Epoch 104/200
+[Train] epoch:104, lr:0.006178, total loss:0.000223
+[Valid] epoch:104, MSE: 0.000093
+Epoch 105/200
+[Train] epoch:105, lr:0.006089, total loss:0.000222
+[Valid] epoch:105, MSE: 0.000091
+Epoch 106/200
+[Train] epoch:106, lr:0.006000, total loss:0.000224
+[Valid] epoch:106, MSE: 0.000094
+Epoch 107/200
+[Train] epoch:107, lr:0.005911, total loss:0.000220
+[Valid] epoch:107, MSE: 0.000083
+Epoch 108/200
+[Train] epoch:108, lr:0.005822, total loss:0.000224
+[Valid] epoch:108, MSE: 0.000091
+Epoch 109/200
+[Train] epoch:109, lr:0.005732, total loss:0.000216
+[Valid] epoch:109, MSE: 0.000078
+[Test] MSE:0.00011577, MAE:0.008843, MAPE:0.944325, RMSE:0.010760
+Epoch 110/200
+[Train] epoch:110, lr:0.005642, total loss:0.000220
+[Valid] epoch:110, MSE: 0.000085
+Epoch 111/200
+[Train] epoch:111, lr:0.005552, total loss:0.000216
+[Valid] epoch:111, MSE: 0.000085
+Epoch 112/200
+[Train] epoch:112, lr:0.005462, total loss:0.000210
+[Valid] epoch:112, MSE: 0.000085
+Epoch 113/200
+[Train] epoch:113, lr:0.005372, total loss:0.000208
+[Valid] epoch:113, MSE: 0.000081
+Epoch 114/200
+[Train] epoch:114, lr:0.005281, total loss:0.000206
+[Valid] epoch:114, MSE: 0.000084
+Epoch 115/200
+[Train] epoch:115, lr:0.005191, total loss:0.000207
+[Valid] epoch:115, MSE: 0.000086
+Epoch 116/200
+[Train] epoch:116, lr:0.005100, total loss:0.000209
+[Valid] epoch:116, MSE: 0.000082
+Epoch 117/200
+[Train] epoch:117, lr:0.005009, total loss:0.000208
+[Valid] epoch:117, MSE: 0.000087
+Epoch 118/200
+[Train] epoch:118, lr:0.004919, total loss:0.000209
+[Valid] epoch:118, MSE: 0.000094
+Epoch 119/200
+[Train] epoch:119, lr:0.004828, total loss:0.000206
+[Valid] epoch:119, MSE: 0.000077
+[Test] MSE:0.00010715, MAE:0.008475, MAPE:0.904220, RMSE:0.010351
+Epoch 120/200
+[Train] epoch:120, lr:0.004738, total loss:0.000203
+[Valid] epoch:120, MSE: 0.000077
+[Test] MSE:0.00010899, MAE:0.008521, MAPE:0.909006, RMSE:0.010440
+Epoch 121/200
+[Train] epoch:121, lr:0.004648, total loss:0.000207
+[Valid] epoch:121, MSE: 0.000086
+Epoch 122/200
+[Train] epoch:122, lr:0.004558, total loss:0.000206
+[Valid] epoch:122, MSE: 0.000080
+Epoch 123/200
+[Train] epoch:123, lr:0.004468, total loss:0.000198
+[Valid] epoch:123, MSE: 0.000080
+Epoch 124/200
+[Train] epoch:124, lr:0.004378, total loss:0.000197
+[Valid] epoch:124, MSE: 0.000083
+Epoch 125/200
+[Train] epoch:125, lr:0.004289, total loss:0.000193
+[Valid] epoch:125, MSE: 0.000081
+Epoch 126/200
+[Train] epoch:126, lr:0.004200, total loss:0.000192
+[Valid] epoch:126, MSE: 0.000080
+Epoch 127/200
+[Train] epoch:127, lr:0.004111, total loss:0.000209
+[Valid] epoch:127, MSE: 0.000071
+[Test] MSE:0.00011199, MAE:0.008648, MAPE:0.922286, RMSE:0.010582
+Epoch 128/200
+[Train] epoch:128, lr:0.004022, total loss:0.000208
+[Valid] epoch:128, MSE: 0.000088
+Epoch 129/200
+[Train] epoch:129, lr:0.003934, total loss:0.000204
+[Valid] epoch:129, MSE: 0.000081
+Epoch 130/200
+[Train] epoch:130, lr:0.003846, total loss:0.000198
+[Valid] epoch:130, MSE: 0.000077
+Epoch 131/200
+[Train] epoch:131, lr:0.003759, total loss:0.000197
+[Valid] epoch:131, MSE: 0.000081
+Epoch 132/200
+[Train] epoch:132, lr:0.003672, total loss:0.000203
+[Valid] epoch:132, MSE: 0.000089
+Epoch 133/200
+[Train] epoch:133, lr:0.003586, total loss:0.000190
+[Valid] epoch:133, MSE: 0.000076
+Epoch 134/200
+[Train] epoch:134, lr:0.003500, total loss:0.000185
+[Valid] epoch:134, MSE: 0.000086
+Epoch 135/200
+[Train] epoch:135, lr:0.003415, total loss:0.000183
+[Valid] epoch:135, MSE: 0.000078
+Epoch 136/200
+[Train] epoch:136, lr:0.003330, total loss:0.000187
+[Valid] epoch:136, MSE: 0.000084
+Epoch 137/200
+[Train] epoch:137, lr:0.003246, total loss:0.000182
+[Valid] epoch:137, MSE: 0.000079
+Epoch 138/200
+[Train] epoch:138, lr:0.003162, total loss:0.000182
+[Valid] epoch:138, MSE: 0.000086
+Epoch 139/200
+[Train] epoch:139, lr:0.003079, total loss:0.000192
+[Valid] epoch:139, MSE: 0.000072
+Epoch 140/200
+[Train] epoch:140, lr:0.002997, total loss:0.000191
+[Valid] epoch:140, MSE: 0.000081
+Epoch 141/200
+[Train] epoch:141, lr:0.002916, total loss:0.000187
+[Valid] epoch:141, MSE: 0.000072
+Epoch 142/200
+[Train] epoch:142, lr:0.002835, total loss:0.000185
+[Valid] epoch:142, MSE: 0.000078
+Epoch 143/200
+[Train] epoch:143, lr:0.002755, total loss:0.000181
+[Valid] epoch:143, MSE: 0.000076
+Epoch 144/200
+[Train] epoch:144, lr:0.002676, total loss:0.000176
+[Valid] epoch:144, MSE: 0.000079
+Epoch 145/200
+[Train] epoch:145, lr:0.002598, total loss:0.000179
+[Valid] epoch:145, MSE: 0.000078
+Epoch 146/200
+[Train] epoch:146, lr:0.002520, total loss:0.000176
+[Valid] epoch:146, MSE: 0.000078
+Epoch 147/200
+[Train] epoch:147, lr:0.002444, total loss:0.000175
+[Valid] epoch:147, MSE: 0.000078
+Epoch 148/200
+[Train] epoch:148, lr:0.002368, total loss:0.000171
+[Valid] epoch:148, MSE: 0.000091
+Epoch 149/200
+[Train] epoch:149, lr:0.002294, total loss:0.000173
+[Valid] epoch:149, MSE: 0.000073
+Epoch 150/200
+[Train] epoch:150, lr:0.002220, total loss:0.000170
+[Valid] epoch:150, MSE: 0.000078
+Epoch 151/200
+[Train] epoch:151, lr:0.002147, total loss:0.000172
+[Valid] epoch:151, MSE: 0.000076
+Epoch 152/200
+[Train] epoch:152, lr:0.002075, total loss:0.000170
+[Valid] epoch:152, MSE: 0.000074
+Epoch 153/200
+[Train] epoch:153, lr:0.002005, total loss:0.000171
+[Valid] epoch:153, MSE: 0.000075
+Epoch 154/200
+[Train] epoch:154, lr:0.001935, total loss:0.000165
+[Valid] epoch:154, MSE: 0.000080
+Epoch 155/200
+[Train] epoch:155, lr:0.001866, total loss:0.000168
+[Valid] epoch:155, MSE: 0.000079
+Epoch 156/200
+[Train] epoch:156, lr:0.001799, total loss:0.000165
+[Valid] epoch:156, MSE: 0.000080
+Epoch 157/200
+[Train] epoch:157, lr:0.001733, total loss:0.000165
+[Valid] epoch:157, MSE: 0.000074
+Epoch 158/200
+[Train] epoch:158, lr:0.001667, total loss:0.000167
+[Valid] epoch:158, MSE: 0.000076
+Epoch 159/200
+[Train] epoch:159, lr:0.001603, total loss:0.000165
+[Valid] epoch:159, MSE: 0.000075
+Epoch 160/200
+[Train] epoch:160, lr:0.001540, total loss:0.000163
+[Valid] epoch:160, MSE: 0.000078
+Epoch 161/200
+[Train] epoch:161, lr:0.001479, total loss:0.000160
+[Valid] epoch:161, MSE: 0.000074
+Epoch 162/200
+[Train] epoch:162, lr:0.001418, total loss:0.000159
+[Valid] epoch:162, MSE: 0.000074
+Epoch 163/200
+[Train] epoch:163, lr:0.001359, total loss:0.000160
+[Valid] epoch:163, MSE: 0.000074
+Early stop at epoch 163
+2025-04-12 18:20 - function:_save_args - INFO - Args:
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:20 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment3
+2025-04-12 18:22 - function:_save_args - INFO - Args:
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:22 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment4
+2025-04-12 18:25 - function:_save_args - INFO - Args:
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:25 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment5
+2025-04-12 18:27 - function:_save_args - INFO - Args:
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:27 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment6
+2025-04-12 18:31 - function:_save_args - INFO - Args:
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:31 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment7
+2025-04-12 18:35 - function:_save_args - INFO - Args:
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:35 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment8
+2025-04-12 18:39 - function:_save_args - INFO - Args:
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:39 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment9
+2025-04-12 18:43 - function:_save_args - INFO - Args:
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	batch:R2.5
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:43 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/2-2/Experiment10
+2025-04-12 18:45 - function:_save_args - INFO - Args:
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:45 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment1
+2025-04-12 18:47 - function:_save_args - INFO - Args:
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:47 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment2
+2025-04-12 18:49 - function:_save_args - INFO - Args:
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:49 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment3
+2025-04-12 18:52 - function:_save_args - INFO - Args:
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:52 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment4
+2025-04-12 18:54 - function:_save_args - INFO - Args:
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:54 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment5
+2025-04-12 18:57 - function:_save_args - INFO - Args:
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 18:57 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment6
+2025-04-12 19:00 - function:_save_args - INFO - Args:
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:00 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment7
+2025-04-12 19:01 - function:_save_args - INFO - Args:
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:01 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment8
+2025-04-12 19:04 - function:_save_args - INFO - Args:
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:04 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment9
+2025-04-12 19:07 - function:_save_args - INFO - Args:
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	batch:R3
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:07 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/3-3/Experiment10
+2025-04-12 19:09 - function:_save_args - INFO - Args:
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:09 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment1
+2025-04-12 19:10 - function:_save_args - INFO - Args:
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:10 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment2
+2025-04-12 19:11 - function:_save_args - INFO - Args:
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:11 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment3
+2025-04-12 19:12 - function:_save_args - INFO - Args:
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment4
+2025-04-12 19:12 - function:_save_args - INFO - Args:
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:12 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment5
+2025-04-12 19:14 - function:_save_args - INFO - Args:
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment6
+2025-04-12 19:14 - function:_save_args - INFO - Args:
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:14 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment7
+2025-04-12 19:15 - function:_save_args - INFO - Args:
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:15 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment8
+2025-04-12 19:16 - function:_save_args - INFO - Args:
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment9
+2025-04-12 19:16 - function:_save_args - INFO - Args:
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	batch:RW
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:16 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/4-4/Experiment10
+2025-04-12 19:17 - function:_save_args - INFO - Args:
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:17 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment1
+2025-04-12 19:20 - function:_save_args - INFO - Args:
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:20 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment2
+2025-04-12 19:26 - function:_save_args - INFO - Args:
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:26 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment3
+2025-04-12 19:30 - function:_save_args - INFO - Args:
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:30 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment4
+2025-04-12 19:35 - function:_save_args - INFO - Args:
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:35 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment5
+2025-04-12 19:40 - function:_save_args - INFO - Args:
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:40 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment6
+2025-04-12 19:43 - function:_save_args - INFO - Args:
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment7
+2025-04-12 19:47 - function:_save_args - INFO - Args:
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment8
+2025-04-12 19:50 - function:_save_args - INFO - Args:
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment9
+2025-04-12 19:54 - function:_save_args - INFO - Args:
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment10

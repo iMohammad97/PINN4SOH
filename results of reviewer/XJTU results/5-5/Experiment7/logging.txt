@@ -1,0 +1,422 @@
+data path:
+['data/XJTU data\\Sim_satellite_battery-1.csv', 'data/XJTU data\\Sim_satellite_battery-2.csv', 'data/XJTU data\\Sim_satellite_battery-3.csv', 'data/XJTU data\\Sim_satellite_battery-5.csv', 'data/XJTU data\\Sim_satellite_battery-6.csv', 'data/XJTU data\\Sim_satellite_battery-7.csv']
+data path:
+['data/XJTU data\\Sim_satellite_battery-4.csv', 'data/XJTU data\\Sim_satellite_battery-8.csv']
+2025-04-12 19:43 - function:_save_args - INFO - Args:
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:43 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment7
+Epoch 1/200
+[Train] epoch:1, lr:0.002000, total loss:0.513733
+[Valid] epoch:1, MSE: 0.361015
+[Test] MSE:0.35376799, MAE:0.592691, MAPE:62.652248, RMSE:0.594784
+Epoch 2/200
+[Train] epoch:2, lr:0.002276, total loss:0.184963
+[Valid] epoch:2, MSE: 0.011607
+[Test] MSE:0.01117261, MAE:0.096411, MAPE:10.266111, RMSE:0.105701
+Epoch 3/200
+[Train] epoch:3, lr:0.002552, total loss:0.052874
+[Valid] epoch:3, MSE: 0.008300
+[Test] MSE:0.01016191, MAE:0.068551, MAPE:7.551831, RMSE:0.100806
+Epoch 4/200
+[Train] epoch:4, lr:0.002828, total loss:0.019885
+[Valid] epoch:4, MSE: 0.022947
+Epoch 5/200
+[Train] epoch:5, lr:0.003103, total loss:0.013512
+[Valid] epoch:5, MSE: 0.003558
+[Test] MSE:0.00459740, MAE:0.051487, MAPE:5.609491, RMSE:0.067804
+Epoch 6/200
+[Train] epoch:6, lr:0.003379, total loss:0.007976
+[Valid] epoch:6, MSE: 0.002486
+[Test] MSE:0.00207430, MAE:0.041389, MAPE:4.429113, RMSE:0.045544
+Epoch 7/200
+[Train] epoch:7, lr:0.003655, total loss:0.005003
+[Valid] epoch:7, MSE: 0.000925
+[Test] MSE:0.00090676, MAE:0.021735, MAPE:2.385340, RMSE:0.030112
+Epoch 8/200
+[Train] epoch:8, lr:0.003931, total loss:0.003149
+[Valid] epoch:8, MSE: 0.000738
+[Test] MSE:0.00073601, MAE:0.019595, MAPE:2.148788, RMSE:0.027130
+Epoch 9/200
+[Train] epoch:9, lr:0.004207, total loss:0.002031
+[Valid] epoch:9, MSE: 0.000454
+[Test] MSE:0.00063387, MAE:0.013950, MAPE:1.563056, RMSE:0.025177
+Epoch 10/200
+[Train] epoch:10, lr:0.004483, total loss:0.001463
+[Valid] epoch:10, MSE: 0.000808
+Epoch 11/200
+[Train] epoch:11, lr:0.004759, total loss:0.001311
+[Valid] epoch:11, MSE: 0.000494
+Epoch 12/200
+[Train] epoch:12, lr:0.005034, total loss:0.001126
+[Valid] epoch:12, MSE: 0.000550
+Epoch 13/200
+[Train] epoch:13, lr:0.005310, total loss:0.000918
+[Valid] epoch:13, MSE: 0.000452
+[Test] MSE:0.00052929, MAE:0.015909, MAPE:1.747321, RMSE:0.023006
+Epoch 14/200
+[Train] epoch:14, lr:0.005586, total loss:0.000818
+[Valid] epoch:14, MSE: 0.000298
+[Test] MSE:0.00041926, MAE:0.011873, MAPE:1.323420, RMSE:0.020476
+Epoch 15/200
+[Train] epoch:15, lr:0.005862, total loss:0.000882
+[Valid] epoch:15, MSE: 0.000282
+[Test] MSE:0.00034780, MAE:0.010675, MAPE:1.192533, RMSE:0.018649
+Epoch 16/200
+[Train] epoch:16, lr:0.006138, total loss:0.000744
+[Valid] epoch:16, MSE: 0.000303
+Epoch 17/200
+[Train] epoch:17, lr:0.006414, total loss:0.000678
+[Valid] epoch:17, MSE: 0.000286
+Epoch 18/200
+[Train] epoch:18, lr:0.006690, total loss:0.000641
+[Valid] epoch:18, MSE: 0.000246
+[Test] MSE:0.00039027, MAE:0.011664, MAPE:1.292042, RMSE:0.019755
+Epoch 19/200
+[Train] epoch:19, lr:0.006966, total loss:0.000672
+[Valid] epoch:19, MSE: 0.000321
+Epoch 20/200
+[Train] epoch:20, lr:0.007241, total loss:0.000672
+[Valid] epoch:20, MSE: 0.000446
+Epoch 21/200
+[Train] epoch:21, lr:0.007517, total loss:0.000695
+[Valid] epoch:21, MSE: 0.000318
+Epoch 22/200
+[Train] epoch:22, lr:0.007793, total loss:0.000726
+[Valid] epoch:22, MSE: 0.000206
+[Test] MSE:0.00029188, MAE:0.009362, MAPE:1.049702, RMSE:0.017084
+Epoch 23/200
+[Train] epoch:23, lr:0.008069, total loss:0.000645
+[Valid] epoch:23, MSE: 0.000258
+Epoch 24/200
+[Train] epoch:24, lr:0.008345, total loss:0.000620
+[Valid] epoch:24, MSE: 0.000281
+Epoch 25/200
+[Train] epoch:25, lr:0.008621, total loss:0.000796
+[Valid] epoch:25, MSE: 0.000150
+[Test] MSE:0.00024384, MAE:0.008319, MAPE:0.932515, RMSE:0.015615
+Epoch 26/200
+[Train] epoch:26, lr:0.008897, total loss:0.000592
+[Valid] epoch:26, MSE: 0.000303
+Epoch 27/200
+[Train] epoch:27, lr:0.009172, total loss:0.000597
+[Valid] epoch:27, MSE: 0.000187
+Epoch 28/200
+[Train] epoch:28, lr:0.009448, total loss:0.000632
+[Valid] epoch:28, MSE: 0.000154
+Epoch 29/200
+[Train] epoch:29, lr:0.009724, total loss:0.000601
+[Valid] epoch:29, MSE: 0.000326
+Epoch 30/200
+[Train] epoch:30, lr:0.010000, total loss:0.000571
+[Valid] epoch:30, MSE: 0.000120
+[Test] MSE:0.00028870, MAE:0.008054, MAPE:0.908992, RMSE:0.016991
+Epoch 31/200
+[Train] epoch:31, lr:0.010000, total loss:0.000653
+[Valid] epoch:31, MSE: 0.000328
+Epoch 32/200
+[Train] epoch:32, lr:0.009999, total loss:0.000781
+[Valid] epoch:32, MSE: 0.000177
+Epoch 33/200
+[Train] epoch:33, lr:0.009997, total loss:0.000698
+[Valid] epoch:33, MSE: 0.000225
+Epoch 34/200
+[Train] epoch:34, lr:0.009992, total loss:0.000499
+[Valid] epoch:34, MSE: 0.000137
+Epoch 35/200
+[Train] epoch:35, lr:0.009987, total loss:0.000408
+[Valid] epoch:35, MSE: 0.000231
+Epoch 36/200
+[Train] epoch:36, lr:0.009979, total loss:0.000423
+[Valid] epoch:36, MSE: 0.000086
+[Test] MSE:0.00018585, MAE:0.007299, MAPE:0.811626, RMSE:0.013633
+Epoch 37/200
+[Train] epoch:37, lr:0.009970, total loss:0.000361
+[Valid] epoch:37, MSE: 0.000315
+Epoch 38/200
+[Train] epoch:38, lr:0.009959, total loss:0.000508
+[Valid] epoch:38, MSE: 0.000101
+Epoch 39/200
+[Train] epoch:39, lr:0.009947, total loss:0.000368
+[Valid] epoch:39, MSE: 0.000153
+Epoch 40/200
+[Train] epoch:40, lr:0.009932, total loss:0.000460
+[Valid] epoch:40, MSE: 0.000194
+Epoch 41/200
+[Train] epoch:41, lr:0.009917, total loss:0.000527
+[Valid] epoch:41, MSE: 0.000150
+Epoch 42/200
+[Train] epoch:42, lr:0.009899, total loss:0.000542
+[Valid] epoch:42, MSE: 0.000184
+Epoch 43/200
+[Train] epoch:43, lr:0.009880, total loss:0.000329
+[Valid] epoch:43, MSE: 0.000096
+Epoch 44/200
+[Train] epoch:44, lr:0.009859, total loss:0.000312
+[Valid] epoch:44, MSE: 0.000141
+Epoch 45/200
+[Train] epoch:45, lr:0.009837, total loss:0.000328
+[Valid] epoch:45, MSE: 0.000093
+Epoch 46/200
+[Train] epoch:46, lr:0.009813, total loss:0.000328
+[Valid] epoch:46, MSE: 0.000144
+Epoch 47/200
+[Train] epoch:47, lr:0.009787, total loss:0.000330
+[Valid] epoch:47, MSE: 0.000099
+Epoch 48/200
+[Train] epoch:48, lr:0.009760, total loss:0.000295
+[Valid] epoch:48, MSE: 0.000131
+Epoch 49/200
+[Train] epoch:49, lr:0.009731, total loss:0.000287
+[Valid] epoch:49, MSE: 0.000148
+Epoch 50/200
+[Train] epoch:50, lr:0.009701, total loss:0.000284
+[Valid] epoch:50, MSE: 0.000082
+[Test] MSE:0.00016357, MAE:0.007534, MAPE:0.834438, RMSE:0.012789
+Epoch 51/200
+[Train] epoch:51, lr:0.009669, total loss:0.000302
+[Valid] epoch:51, MSE: 0.000099
+Epoch 52/200
+[Train] epoch:52, lr:0.009636, total loss:0.000298
+[Valid] epoch:52, MSE: 0.000149
+Epoch 53/200
+[Train] epoch:53, lr:0.009601, total loss:0.000296
+[Valid] epoch:53, MSE: 0.000069
+[Test] MSE:0.00016864, MAE:0.007006, MAPE:0.780701, RMSE:0.012986
+Epoch 54/200
+[Train] epoch:54, lr:0.009564, total loss:0.000306
+[Valid] epoch:54, MSE: 0.000114
+Epoch 55/200
+[Train] epoch:55, lr:0.009526, total loss:0.000286
+[Valid] epoch:55, MSE: 0.000118
+Epoch 56/200
+[Train] epoch:56, lr:0.009486, total loss:0.000288
+[Valid] epoch:56, MSE: 0.000283
+Epoch 57/200
+[Train] epoch:57, lr:0.009445, total loss:0.000296
+[Valid] epoch:57, MSE: 0.000149
+Epoch 58/200
+[Train] epoch:58, lr:0.009403, total loss:0.000276
+[Valid] epoch:58, MSE: 0.000073
+Epoch 59/200
+[Train] epoch:59, lr:0.009359, total loss:0.000283
+[Valid] epoch:59, MSE: 0.000095
+Epoch 60/200
+[Train] epoch:60, lr:0.009313, total loss:0.000312
+[Valid] epoch:60, MSE: 0.000144
+Epoch 61/200
+[Train] epoch:61, lr:0.009266, total loss:0.000277
+[Valid] epoch:61, MSE: 0.000211
+Epoch 62/200
+[Train] epoch:62, lr:0.009218, total loss:0.000303
+[Valid] epoch:62, MSE: 0.000142
+Epoch 63/200
+[Train] epoch:63, lr:0.009168, total loss:0.000290
+[Valid] epoch:63, MSE: 0.000083
+Epoch 64/200
+[Train] epoch:64, lr:0.009117, total loss:0.000294
+[Valid] epoch:64, MSE: 0.000088
+Epoch 65/200
+[Train] epoch:65, lr:0.009064, total loss:0.000316
+[Valid] epoch:65, MSE: 0.000264
+Epoch 66/200
+[Train] epoch:66, lr:0.009010, total loss:0.000286
+[Valid] epoch:66, MSE: 0.000152
+Epoch 67/200
+[Train] epoch:67, lr:0.008955, total loss:0.000294
+[Valid] epoch:67, MSE: 0.000106
+Epoch 68/200
+[Train] epoch:68, lr:0.008898, total loss:0.000285
+[Valid] epoch:68, MSE: 0.000241
+Epoch 69/200
+[Train] epoch:69, lr:0.008841, total loss:0.000276
+[Valid] epoch:69, MSE: 0.000114
+Epoch 70/200
+[Train] epoch:70, lr:0.008782, total loss:0.000275
+[Valid] epoch:70, MSE: 0.000060
+[Test] MSE:0.00018416, MAE:0.007024, MAPE:0.787422, RMSE:0.013571
+Epoch 71/200
+[Train] epoch:71, lr:0.008721, total loss:0.000296
+[Valid] epoch:71, MSE: 0.000109
+Epoch 72/200
+[Train] epoch:72, lr:0.008660, total loss:0.000269
+[Valid] epoch:72, MSE: 0.000213
+Epoch 73/200
+[Train] epoch:73, lr:0.008597, total loss:0.000256
+[Valid] epoch:73, MSE: 0.000063
+Epoch 74/200
+[Train] epoch:74, lr:0.008533, total loss:0.000278
+[Valid] epoch:74, MSE: 0.000294
+Epoch 75/200
+[Train] epoch:75, lr:0.008467, total loss:0.000298
+[Valid] epoch:75, MSE: 0.000150
+Epoch 76/200
+[Train] epoch:76, lr:0.008401, total loss:0.000269
+[Valid] epoch:76, MSE: 0.000103
+Epoch 77/200
+[Train] epoch:77, lr:0.008334, total loss:0.000260
+[Valid] epoch:77, MSE: 0.000177
+Epoch 78/200
+[Train] epoch:78, lr:0.008265, total loss:0.000270
+[Valid] epoch:78, MSE: 0.000088
+Epoch 79/200
+[Train] epoch:79, lr:0.008195, total loss:0.000260
+[Valid] epoch:79, MSE: 0.000213
+Epoch 80/200
+[Train] epoch:80, lr:0.008125, total loss:0.000268
+[Valid] epoch:80, MSE: 0.000168
+Epoch 81/200
+[Train] epoch:81, lr:0.008053, total loss:0.000262
+[Valid] epoch:81, MSE: 0.000082
+Epoch 82/200
+[Train] epoch:82, lr:0.007980, total loss:0.000261
+[Valid] epoch:82, MSE: 0.000254
+Epoch 83/200
+[Train] epoch:83, lr:0.007906, total loss:0.000266
+[Valid] epoch:83, MSE: 0.000134
+Epoch 84/200
+[Train] epoch:84, lr:0.007832, total loss:0.000249
+[Valid] epoch:84, MSE: 0.000105
+Epoch 85/200
+[Train] epoch:85, lr:0.007756, total loss:0.000244
+[Valid] epoch:85, MSE: 0.000124
+Epoch 86/200
+[Train] epoch:86, lr:0.007680, total loss:0.000239
+[Valid] epoch:86, MSE: 0.000094
+Epoch 87/200
+[Train] epoch:87, lr:0.007602, total loss:0.000244
+[Valid] epoch:87, MSE: 0.000164
+Epoch 88/200
+[Train] epoch:88, lr:0.007524, total loss:0.000246
+[Valid] epoch:88, MSE: 0.000116
+Epoch 89/200
+[Train] epoch:89, lr:0.007445, total loss:0.000254
+[Valid] epoch:89, MSE: 0.000072
+Epoch 90/200
+[Train] epoch:90, lr:0.007365, total loss:0.000270
+[Valid] epoch:90, MSE: 0.000172
+Epoch 91/200
+[Train] epoch:91, lr:0.007284, total loss:0.000267
+[Valid] epoch:91, MSE: 0.000092
+Epoch 92/200
+[Train] epoch:92, lr:0.007203, total loss:0.000260
+[Valid] epoch:92, MSE: 0.000143
+Epoch 93/200
+[Train] epoch:93, lr:0.007121, total loss:0.000263
+[Valid] epoch:93, MSE: 0.000088
+Epoch 94/200
+[Train] epoch:94, lr:0.007038, total loss:0.000269
+[Valid] epoch:94, MSE: 0.000199
+Epoch 95/200
+[Train] epoch:95, lr:0.006954, total loss:0.000267
+[Valid] epoch:95, MSE: 0.000110
+Epoch 96/200
+[Train] epoch:96, lr:0.006870, total loss:0.000248
+[Valid] epoch:96, MSE: 0.000205
+Epoch 97/200
+[Train] epoch:97, lr:0.006785, total loss:0.000246
+[Valid] epoch:97, MSE: 0.000088
+Epoch 98/200
+[Train] epoch:98, lr:0.006700, total loss:0.000244
+[Valid] epoch:98, MSE: 0.000106
+Epoch 99/200
+[Train] epoch:99, lr:0.006614, total loss:0.000250
+[Valid] epoch:99, MSE: 0.000130
+Epoch 100/200
+[Train] epoch:100, lr:0.006528, total loss:0.000231
+[Valid] epoch:100, MSE: 0.000097
+Epoch 101/200
+[Train] epoch:101, lr:0.006441, total loss:0.000246
+[Valid] epoch:101, MSE: 0.000134
+Epoch 102/200
+[Train] epoch:102, lr:0.006354, total loss:0.000233
+[Valid] epoch:102, MSE: 0.000069
+Epoch 103/200
+[Train] epoch:103, lr:0.006266, total loss:0.000245
+[Valid] epoch:103, MSE: 0.000144
+Epoch 104/200
+[Train] epoch:104, lr:0.006178, total loss:0.000241
+[Valid] epoch:104, MSE: 0.000113
+Epoch 105/200
+[Train] epoch:105, lr:0.006089, total loss:0.000235
+[Valid] epoch:105, MSE: 0.000139
+Epoch 106/200
+[Train] epoch:106, lr:0.006000, total loss:0.000243
+[Valid] epoch:106, MSE: 0.000114
+Early stop at epoch 106
+2025-04-12 19:47 - function:_save_args - INFO - Args:
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:47 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment8
+2025-04-12 19:50 - function:_save_args - INFO - Args:
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:50 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment9
+2025-04-12 19:54 - function:_save_args - INFO - Args:
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	data:XJTU
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	train_batch:0
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	test_batch:1
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	batch:satellite
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	batch_size:256
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	epochs:200
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	early_stop:35
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	lr:0.01
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	F_layers_num:3
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	F_hidden_dim:60
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	alpha:0.08549401305482651
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	beta:6.040426381151848
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-04-12 19:54 - function:_save_args - CRITICAL - 	save_folder:results of reviewer/XJTU results/5-5/Experiment10
